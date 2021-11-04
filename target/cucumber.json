@@ -1,31 +1,45 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-11-04T14:08:49.980Z",
-        "line": 2,
-        "name": "Login as a User",
+        "start_timestamp": "2021-11-04T21:16:58.674Z",
+        "line": 3,
+        "name": "Savings account redirect",
         "description": "",
-        "id": "user-should-be-able-to-login;login-as-a-user",
+        "id": "navigating-to-specific-accounts-in-accounts-activity;savings-account-redirect",
+        "after": [
+          {
+            "result": {
+              "duration": 683000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 13201000000,
+              "status": "passed"
             },
-            "line": 3,
-            "name": "the user is on the login page",
-            "match": {},
+            "line": 4,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.zerobank.stepdefinitions.LoginStepDefs.theUserIsLoggedIn()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
               "status": "undefined"
             },
-            "line": 4,
-            "name": "the user enters the User information",
+            "line": 5,
+            "name": "the user clicks on Savings link on the Account Summary page",
             "match": {},
             "keyword": "When "
           },
@@ -33,19 +47,42 @@
             "result": {
               "status": "undefined"
             },
-            "line": 5,
-            "name": "the user should be able to login",
+            "line": 6,
+            "name": "the Account Activity page should be displayed",
             "match": {},
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Account drop down should have Savings selected",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
           }
         ]
       }
     ],
-    "name": "User should be able to login",
+    "name": "Navigating to specific accounts in Accounts Activity",
     "description": "",
-    "id": "user-should-be-able-to-login",
+    "id": "navigating-to-specific-accounts-in-accounts-activity",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/login.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/AccountActivityNavigation.feature",
+    "tags": [
+      {
+        "name": "@wip",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

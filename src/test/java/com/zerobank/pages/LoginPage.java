@@ -14,5 +14,28 @@ public LoginPage(){
 @FindBy(id = "signin_button")
     public WebElement signButton;
 
+@FindBy(id = "user_login")
+    public WebElement loginSection;
 
+@FindBy(id ="user_password" )
+    public  WebElement passwordSection;
+
+@FindBy(name = "submit")
+    public WebElement SignIn;
+
+@FindBy(id = "details-button")
+    public WebElement SecureDetails;
+
+    @FindBy(id = "proceed-link")
+    public WebElement SecureSubmit;
+
+public void login(String username,String password){
+
+        signButton.click();
+        loginSection.sendKeys(username);
+        passwordSection.sendKeys(password);
+        SignIn.click();
+
+
+}
 }
