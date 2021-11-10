@@ -25,8 +25,8 @@ public class LoginStepDefs {
             LoginPage loginPage = new LoginPage();
 
             loginPage.login(username, password);
-            loginPage.SecureDetails.click();
-            loginPage.SecureSubmit.click();
+          //  loginPage.SecureDetails.click();
+           //  loginPage.SecureSubmit.click();
 
         }
 
@@ -48,8 +48,8 @@ public class LoginStepDefs {
             String username = ConfigurationReader.get("username");
             String password = ConfigurationReader.get("password");
             loginPage.login(username, password);
-            loginPage.SecureDetails.click();
-            loginPage.SecureSubmit.click();
+           // loginPage.SecureDetails.click();
+            // loginPage.SecureSubmit.click();
         }
 
     }
