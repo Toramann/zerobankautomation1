@@ -29,6 +29,9 @@ public LoginPage(){
     @FindBy(id = "proceed-link")
     public WebElement SecureSubmit;
 
+    @FindBy(xpath = "//*[@class='alert alert-error']")
+    public WebElement errormsg;
+
 public void login(String username,String password){
 
         signButton.click();

@@ -1,6 +1,7 @@
 package com.zerobank.stepdefinitions;
 
 import com.zerobank.pages.LoginPage;
+import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -52,4 +53,22 @@ public class LoginStepDefs {
             // loginPage.SecureSubmit.click();
         }
 
+
+
+    @Then("the user should see error message")
+    public void theUserShouldSeeErrorMessage() {
+    Assert.assertEquals("Login and/or password are wrong.",new LoginPage().errormsg.getText());
+
+
     }
+
+
+    @When("the user enter invalid {string} and {string}")
+    public void theUserEnterInvalidAnd(String username, String password) {
+
+        new LoginPage().login(username,password);
+
+        BrowserUtils.waitFor(2);
+
+    }
+}

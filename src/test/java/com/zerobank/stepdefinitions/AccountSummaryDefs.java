@@ -2,15 +2,19 @@ package com.zerobank.stepdefinitions;
 
 import com.zerobank.pages.AccountActivityPage;
 import com.zerobank.pages.BasePage;
+import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class AccountSummaryDefs {
     AccountActivityPage accountActivityPage = new AccountActivityPage();
@@ -44,6 +48,24 @@ public class AccountSummaryDefs {
 
 
 
+
+    }
+
+    @Given("Page should have the title Zero – Account summary")
+    public void pageShouldHaveTheTitleZeroAccountSummary() {
+
+     String actualTitle = Driver.get().getTitle();
+
+     Assert.assertEquals("Zero - Account Summary",actualTitle);
+
+    }
+
+    @When("Account summary page have titles")
+    public void accountSummaryPageHaveTitles(List<String> titlesAccount) {
+
+    List<String> actualTitles =BrowserUtils.getElementsText(accountActivityPage.accountTitles);
+
+    Assert.assertEquals(titlesAccount,actualTitles);
 
     }
 }

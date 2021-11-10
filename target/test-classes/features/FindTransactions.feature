@@ -32,7 +32,7 @@ Feature: Find Transactions in Account Activity
     When the user enters description "online"
     And clicks search
     Then results table should only show descriptions containing "online"
-  @wip
+
   Scenario: Type
     Given the user accesses the Find Transactions tab
     And clicks search
@@ -40,7 +40,7 @@ Feature: Find Transactions in Account Activity
     Then results table should show at least one result under Withdrawal
     When user selects type "Deposıt"
     Then results table should show at least one result under Deposit
-    But results table should show no result under Withdrawal
+    But results table should show no result under Withdrawal***
     When user selects type "Wıthdrawal"
     Then results table should show at least one result under Withdrawal
-    But results table should show no result under Deposit
+    But results table should show no result under Deposit***

@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/FindTransactions.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AccountSummary.feature");
 formatter.feature({
-  "name": "Find Transactions in Account Activity",
+  "name": "Account Summary",
   "description": "",
   "keyword": "Feature"
 });
 formatter.background({
-  "name": "Login",
+  "name": "login",
   "description": "",
   "keyword": "Background"
 });
@@ -20,7 +20,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Type",
+  "name": "Account Summary Page",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -30,107 +30,44 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "the user accesses the Find Transactions tab",
+  "name": "Page should have the title Zero – Account summary",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.the_user_accesses_the_Find_Transactions_tab()"
+  "location": "com.zerobank.stepdefinitions.AccountSummaryDefs.pageShouldHaveTheTitleZeroAccountSummary()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "clicks search",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.clicksSearch()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "results table should show at least one result under Deposit",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.resultsTableShouldShowAtLeastOneResultUnderDeposit()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "results table should show at least one result under Withdrawal",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.resultsTableShouldShowAtLeastOneResultUnderWithdrawal()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects type \"Deposıt\"",
+  "name": "Account summary page have titles",
+  "rows": [
+    {},
+    {},
+    {},
+    {}
+  ],
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.userSelectsType(java.lang.String)"
+  "location": "com.zerobank.stepdefinitions.AccountSummaryDefs.accountSummaryPageHaveTitles(java.util.List\u003cjava.lang.String\u003e)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "results table should show at least one result under Deposit",
+  "name": "Account table should have titles",
+  "rows": [
+    {},
+    {},
+    {}
+  ],
   "keyword": "Then "
 });
-formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.resultsTableShouldShowAtLeastOneResultUnderDeposit()"
-});
+formatter.match({});
 formatter.result({
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.step({
-  "name": "results table should show no result under Withdrawal",
-  "keyword": "But "
-});
-formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.resultsTableShouldShowNoResultUnderWithdrawal()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects type \"Wıthdrawal\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.userSelectsType(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "results table should show at least one result under Withdrawal",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.resultsTableShouldShowAtLeastOneResultUnderWithdrawal()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "results table should show no result under Deposit",
-  "keyword": "But "
-});
-formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsDefs.resultsTableShouldShowNoResultUnderDeposit()"
-});
-formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.zerobank.stepdefinitions.FindTransactionsDefs.resultsTableShouldShowNoResultUnderDeposit(FindTransactionsDefs.java:145)\r\n\tat ✽.results table should show no result under Deposit(file:///C:/Users/osman.toraman/IdeaProjects/zerobankautomation/src/test/resources/features/FindTransactions.feature:46)\r\n",
-  "status": "failed"
-});
-formatter.embedding("image/png", "embedded0.png", "screenshot");
 formatter.after({
   "status": "passed"
 });

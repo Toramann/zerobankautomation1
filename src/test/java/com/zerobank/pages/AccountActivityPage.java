@@ -95,4 +95,7 @@ public class AccountActivityPage extends BasePage {
 
     @FindBy(xpath = "//*[@id='filtered_transactions_for_account']/table/tbody/tr/td[1]")
     public List<String> datesAccount;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div/div/h2")
+    public List<WebElement> accountTitles;
 }
