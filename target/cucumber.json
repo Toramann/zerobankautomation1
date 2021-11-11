@@ -3,36 +3,15 @@
     "line": 2,
     "elements": [
       {
-        "line": 4,
-        "name": "login",
+        "start_timestamp": "2021-11-11T14:15:34.990Z",
+        "line": 33,
+        "name": "Account Activity Titles",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 12434000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user is logged in",
-            "match": {
-              "location": "com.zerobank.stepdefinitions.LoginStepDefs.theUserIsLoggedIn()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-11-10T15:21:14.933Z",
-        "line": 7,
-        "name": "Account Summary Page",
-        "description": "",
-        "id": "account-summary;account-summary-page",
+        "id": "navigating-to-specific-accounts-in-accounts-activity;account-activity-titles",
         "after": [
           {
             "result": {
-              "duration": 1467000000,
+              "duration": 1366000000,
               "status": "passed"
             },
             "match": {
@@ -45,61 +24,87 @@
         "steps": [
           {
             "result": {
-              "duration": 56000000,
+              "duration": 10479000000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Page should have the title Zero – Account summary",
+            "line": 34,
+            "name": "the user is logged in",
             "match": {
-              "location": "com.zerobank.stepdefinitions.AccountSummaryDefs.pageShouldHaveTheTitleZeroAccountSummary()"
+              "location": "com.zerobank.stepdefinitions.LoginStepDefs.theUserIsLoggedIn()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 152000000,
+              "duration": 2098000000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "Account summary page have titles",
+            "line": 35,
+            "name": "the user clicks Account Activity",
             "match": {
-              "location": "com.zerobank.stepdefinitions.AccountSummaryDefs.accountSummaryPageHaveTitles(java.util.List\u003cjava.lang.String\u003e)"
+              "location": "com.zerobank.stepdefinitions.AccountActivityDefs.theUserClicksAccountActivity()"
             },
-            "rows": [
-              {
-                "cells": [
-                  "Cash Accounts"
-                ]
-              },
-              {
-                "cells": [
-                  "Investment Accounts"
-                ]
-              },
-              {
-                "cells": [
-                  "Credit Accounts"
-                ]
-              },
-              {
-                "cells": [
-                  "Loan Accounts"
-                ]
-              }
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 12000000,
+              "status": "passed"
             },
-            "line": 15,
-            "name": "Account table should have titles",
-            "match": {},
+            "line": 36,
+            "name": "Page should have the title \"Zero - Account Activity\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Zero - Account Activity\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.zerobank.stepdefinitions.AccountSummaryDefs.pageShouldHaveTheTitle(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 188000000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "the account dropdown default option should display savings",
+            "match": {
+              "location": "com.zerobank.stepdefinitions.AccountActivityDefs.theAccountDropdownDefaultOptionShouldDisplaySavings()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 192000000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the Account dropdown should be verify",
+            "match": {
+              "location": "com.zerobank.stepdefinitions.AccountActivityDefs.theAccountDropdownShouldBeVerify(java.util.List\u003cjava.lang.String\u003e)"
+            },
             "rows": [
               {
                 "cells": [
-                  "Account"
+                  "Savings"
+                ]
+              },
+              {
+                "cells": [
+                  "Checking"
+                ]
+              },
+              {
+                "cells": [
+                  "Savings"
+                ]
+              },
+              {
+                "cells": [
+                  "Loan"
                 ]
               },
               {
@@ -109,7 +114,41 @@
               },
               {
                 "cells": [
-                  "Balance"
+                  "Brokerage"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Transactions titles should be verify",
+            "match": {
+              "location": "com.zerobank.stepdefinitions.AccountActivityDefs.transactionsTitlesShouldBeVerify(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Date"
+                ]
+              },
+              {
+                "cells": [
+                  "Description"
+                ]
+              },
+              {
+                "cells": [
+                  "Deposit"
+                ]
+              },
+              {
+                "cells": [
+                  "Withdrawal"
                 ]
               }
             ],
@@ -123,11 +162,11 @@
         ]
       }
     ],
-    "name": "Account Summary",
+    "name": "Navigating to specific accounts in Accounts Activity",
     "description": "",
-    "id": "account-summary",
+    "id": "navigating-to-specific-accounts-in-accounts-activity",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AccountSummary.feature",
+    "uri": "file:src/test/resources/features/AccountActivityNavigation.feature",
     "tags": []
   }
 ]

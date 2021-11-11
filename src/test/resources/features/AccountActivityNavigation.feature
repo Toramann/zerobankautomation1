@@ -29,3 +29,21 @@ Feature: Navigating to specific accounts in Accounts Activity
     When the user clicks on "Loan" link on the Account Summary page
     Then the Account Activity page should be displayed
     And Account drop down should have "Loan" selected
+  @wip
+  Scenario: Account Activity Titles
+    Given the user is logged in
+    When  the user clicks Account Activity
+    When Page should have the title "Zero - Account Activity"
+    When  the account dropdown default option should display savings
+    When the Account dropdown should be verify
+    | Savings|
+    |Checking|
+    |Savings |
+    |Loan    |
+    |Credit Card|
+    |Brokerage|
+    Then Transactions titles should be verify
+  |Date       |
+  |Description|
+  |Deposit    |
+  |Withdrawal |

@@ -98,4 +98,10 @@ public class AccountActivityPage extends BasePage {
 
     @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div/div/h2")
     public List<WebElement> accountTitles;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div/div/div[3]/div/table/thead/tr/th")
+    public List<WebElement>  creditTitles;
+
+    @FindBy(xpath = "//*[@id='all_transactions_for_account']/table/thead/tr/th")
+    public  List<WebElement> transTitles;
 }

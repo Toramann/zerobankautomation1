@@ -1,13 +1,18 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AccountSummary.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AccountActivityNavigation.feature");
 formatter.feature({
-  "name": "Account Summary",
+  "name": "Navigating to specific accounts in Accounts Activity",
   "description": "",
   "keyword": "Feature"
 });
-formatter.background({
-  "name": "login",
+formatter.scenario({
+  "name": "Account Activity Titles",
   "description": "",
-  "keyword": "Background"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@wip"
+    }
+  ]
 });
 formatter.step({
   "name": "the user is logged in",
@@ -19,29 +24,41 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Account Summary Page",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@wip"
-    }
-  ]
-});
 formatter.step({
-  "name": "Page should have the title Zero – Account summary",
-  "keyword": "Given "
+  "name": "the user clicks Account Activity",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefinitions.AccountSummaryDefs.pageShouldHaveTheTitleZeroAccountSummary()"
+  "location": "com.zerobank.stepdefinitions.AccountActivityDefs.theUserClicksAccountActivity()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Account summary page have titles",
+  "name": "Page should have the title \"Zero - Account Activity\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefinitions.AccountSummaryDefs.pageShouldHaveTheTitle(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the account dropdown default option should display savings",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefinitions.AccountActivityDefs.theAccountDropdownDefaultOptionShouldDisplaySavings()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the Account dropdown should be verify",
   "rows": [
+    {},
+    {},
     {},
     {},
     {},
@@ -50,23 +67,26 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefinitions.AccountSummaryDefs.accountSummaryPageHaveTitles(java.util.List\u003cjava.lang.String\u003e)"
+  "location": "com.zerobank.stepdefinitions.AccountActivityDefs.theAccountDropdownShouldBeVerify(java.util.List\u003cjava.lang.String\u003e)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Account table should have titles",
+  "name": "Transactions titles should be verify",
   "rows": [
+    {},
     {},
     {},
     {}
   ],
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.zerobank.stepdefinitions.AccountActivityDefs.transactionsTitlesShouldBeVerify(java.util.List\u003cjava.lang.String\u003e)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"

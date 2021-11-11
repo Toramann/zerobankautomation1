@@ -51,14 +51,8 @@ public class AccountSummaryDefs {
 
     }
 
-    @Given("Page should have the title Zero – Account summary")
-    public void pageShouldHaveTheTitleZeroAccountSummary() {
 
-     String actualTitle = Driver.get().getTitle();
 
-     Assert.assertEquals("Zero - Account Summary",actualTitle);
-
-    }
 
     @When("Account summary page have titles")
     public void accountSummaryPageHaveTitles(List<String> titlesAccount) {
@@ -66,6 +60,24 @@ public class AccountSummaryDefs {
     List<String> actualTitles =BrowserUtils.getElementsText(accountActivityPage.accountTitles);
 
     Assert.assertEquals(titlesAccount,actualTitles);
+
+    }
+
+    @Then("Account table should have titles")
+    public void accountTableShouldHaveTitles(List<String> titlesCredit) {
+
+    List<String> actualTitles = BrowserUtils.getElementsText(accountActivityPage.creditTitles);
+
+    Assert.assertEquals(titlesCredit,actualTitles);
+
+    }
+
+    @Given("Page should have the title {string}")
+    public void pageShouldHaveTheTitle(String expectedTitle) {
+
+    String actualTitle = Driver.get().getTitle();
+
+    Assert.assertEquals(expectedTitle,actualTitle);
 
     }
 }
